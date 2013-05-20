@@ -14,4 +14,4 @@ Run
 
 to just sleep for longer than the task takes.
 
-When using `result.ready()`, the result is requeued after calling `result.get`.
+When using `result.ready()`, the result is requeued after calling `result.get`, so it'll just sit around until it expires. When just sleeping, the result message is collected as you'd expect and the result queue disappears.
