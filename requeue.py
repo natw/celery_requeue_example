@@ -17,9 +17,9 @@ def main():
     if sys.argv[-1] == 'wait':
         print 'waiting...'
         time.sleep(4)
-        # print result.get()
     else:
         while not result.ready():
+        # while result.state not in ['FAILURE', 'SUCCESS']: # same behavior
             print 'checking'
             time.sleep(.5)
 
